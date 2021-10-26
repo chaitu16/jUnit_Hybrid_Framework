@@ -1,5 +1,8 @@
 package com.qtpselenium.test;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 import org.apache.log4j.Logger;
 
 import com.qtpselenium.xls.read.Excel_Reader;
@@ -8,7 +11,7 @@ public class DriverScript {
 	
 	public Excel_Reader suiteXLS;
 	
-	public Logger APP_LOGS;
+	public static Logger APP_LOGS;
 	
 	public String current_Suite_Xls;
 	public Excel_Reader currentXLS;
@@ -16,6 +19,16 @@ public class DriverScript {
 	public String currentTestcaseName;
 	public int currentTestcaseID;
 	public String currentKeyword;
+	public Keywords keywords;
+	public Method method[];
+	
+	
+	
+	public DriverScript() {
+		keywords = new Keywords();
+		 method = keywords.getClass().getMethods();
+	}
+	
 	
 	public static void main(String[] args) {
 		DriverScript test = new DriverScript();
@@ -45,13 +58,14 @@ public class DriverScript {
 				
 				currentXLS = new Excel_Reader(System.getProperty("user.dir")+"\\src\\com\\qtpselenium\\xls\\"+current_Suite_Xls);
 				System.out.println("Current Suite is : "+ current_Suite_Xls+"*******************************Current Suite");
-				
+				APP_LOGS.debug("Current Suite is : "+ current_Suite_Xls+"*******************************Current Suite");
 			
 				for(currentTCID=2; currentTCID<=currentXLS.getRowCount(Constants.Suite_TC_Name);currentTCID++ ) {	
 					currentTestcaseName = currentXLS.getCellData(Constants.Suite_TC_Name, Constants.Suite_TCID, currentTCID);
 					System.out.println("current test case is :" +currentTestcaseName+"---------------------Current Test Case");
+					APP_LOGS.debug("current test case is :" +currentTestcaseName+"---------------------Current Test Case");
 					
-		//			if(currentXLS.getCellData(Constants.Suite_TC_Name, Constants.Suite_Runmode,currentTCID).equals(Constants.Runmode_Value)){
+					if(currentXLS.getCellData(Constants.Suite_TC_Name, Constants.Suite_Runmode,currentTCID).equals(Constants.Runmode_Value)){
 						
 		//			System.out.println(currentXLS.getCellData(Constants.Suite_TC_Name, Constants.Suite_TCID, currentTCID)+"---------???");	
 		//			}
@@ -60,7 +74,9 @@ public class DriverScript {
 						
 						if(currentXLS.getCellData(currentTestcaseName, Constants.Suite_Runmode, i).equals(Constants.Runmode_Value)) {
 							
-						  System.out.println(currentXLS.getCellData(currentTestcaseName, 0, i));
+					//	  System.out.println(currentXLS.getCellData(currentTestcaseName, 0, i));
+						  APP_LOGS.debug(currentXLS.getCellData(currentTestcaseName, 0, i));
+						  
 						  executeKeywords();
 					}
 					
@@ -76,6 +92,7 @@ public class DriverScript {
 				
       }
 	}
+		}
 }
 	
 	public void executeKeywords() {
@@ -84,7 +101,21 @@ public class DriverScript {
 			if(currentXLS.getCellData(Constants.TestSuite_TestSteps, Constants.Suite_TCID, currentTestcaseID).equals(currentTestcaseName))	
 			{
 				currentKeyword = currentXLS.getCellData(Constants.TestSuite_TestSteps, Constants.TestSteps_Keyword, currentTestcaseID);
-				System.out.println(currentKeyword);
+				//  System.out.println(currentKeyword);	
+				APP_LOGS.debug(currentKeyword);	
+				
+				
+				for(int i =0; i<method.length;i++) {
+					String keyWord = method[i].getName();
+					if(keyWord.equals(currentKeyword)) {
+						try {
+							method[i].invoke(keywords);
+						} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+				}
 			}
 		}
 		
