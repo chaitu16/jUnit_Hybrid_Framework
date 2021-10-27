@@ -11,5 +11,7 @@ public class Constants {
 	public static String Suite_TC_Name="Test Cases";
 	public static String TestSuite_TestSteps = "Test Steps";
 	public static String TestSteps_Keyword = "Keyword";
+	public static String KEYWORD_PASS = "PASS";
+	public static String KEYWORD_FAIL = "FAIL";
 
 }
