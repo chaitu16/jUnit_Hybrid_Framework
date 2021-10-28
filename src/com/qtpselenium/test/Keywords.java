@@ -8,100 +8,125 @@ public class Keywords {
 	
 	public WebDriver driver;
 	
-	public void openBrowser() {
+	public String openBrowser() {
+		
 		APP_LOGS.debug("Opening browser");
 		APP_LOGS.debug(Constants.KEYWORD_PASS);
+		return Constants.KEYWORD_PASS;
 
 	}
-	public void verifyText() {
+	public String verifyText() {
+		APP_LOGS.debug("Verifying Text Method");
+		return Constants.KEYWORD_PASS;
+	}
+	
+	public String navigate() {
+		APP_LOGS.debug("Navigate to URL");
+		return Constants.KEYWORD_PASS;
+	}
+	
+	public String verifyTitle() {
+		APP_LOGS.debug("Verify Title");
+		return Constants.KEYWORD_PASS;
+	}
+	
+	public String clickLink() {
+		APP_LOGS.debug("Click Link");
+		return Constants.KEYWORD_PASS;
 		
 	}
 	
-	public void navigate() {
+	public String writeInInput() {
+		APP_LOGS.debug("Send keys ");
+		return Constants.KEYWORD_PASS;
+	}
+	
+	public String clickButton() {
+		
+		APP_LOGS.debug("CLick Button");
+		return Constants.KEYWORD_PASS;
+	}
+	public String verifyLinkText() {
+		APP_LOGS.debug("LinkText Verification");
+		return Constants.KEYWORD_PASS;
 		
 	}
 	
-	public void verifyTitle() {
+	public String selectLink() {
+		
+		APP_LOGS.debug("Select Link");
+		return Constants.KEYWORD_PASS;
+	}
+	
+	public String selectListItem() {
+		APP_LOGS.debug("List Item Selection");
+		return Constants.KEYWORD_PASS;
 		
 	}
 	
-	public void clickLink() {
-
+	public String verifyListSelection() {
+		APP_LOGS.debug("Verify selected list item or element");
+		return Constants.KEYWORD_PASS;
+	}
+	
+	public String click() {
+		APP_LOGS.debug("Generic click");
+		return Constants.KEYWORD_PASS;
 		
 	}
 	
-	public void writeInInput() {
-		
+	public String verifyButtonText() {
+		APP_LOGS.debug("Button text");
+		return Constants.KEYWORD_PASS;
 	}
 	
-	public void clickButton() {
-		
-	}
-	public void verifyLinkText() {
-		
-		
-	}
-	
-	public void selectLink() {
-		
-		
-	}
-	
-	public void selectListItem() {
-		
-		
-	}
-	
-	public void verifyListSelection() {
-		
-	}
-	
-	public void click() {
-		
-		
-	}
-	
-	public void verifyButtonText() {
-		
-	}
-	
-	public void verifyAllElements() {
+	public String verifyAllElements() {
 		//select from list
+		APP_LOGS.debug("All elements from list being verified");
+		return Constants.KEYWORD_PASS;
 	}
 	
-	public void selectCheckbox() {
-		
+	public String selectCheckbox() {
+		APP_LOGS.debug("Check box select");
+		return Constants.KEYWORD_PASS;
 	}
 	
-	public void verifySelectedCheckbox() {
-		
+	public String verifySelectedCheckbox() {
+		APP_LOGS.debug("verifySelectedCheckbox");
+		return Constants.KEYWORD_PASS;
 	}
 	
-	public void clickImage() {
-		
+	public String clickImage() {
+		APP_LOGS.debug("clickImage");
+		return Constants.KEYWORD_PASS;
 	}
 	
-	public void verifyFileName() {
-		
+	public String verifyFileName() {
+		APP_LOGS.debug("verifyFileName");
+		return Constants.KEYWORD_PASS;
 		//uploaded image or File
 	}
 	
 	
-	public void selectRadio() {
-		
+	public String selectRadio() {
+		APP_LOGS.debug("selectRadio");
+		return Constants.KEYWORD_PASS;
 	}
 	
-	public void verifyRadioSelected() {
-		
+	public String verifyRadioSelected() {
+		APP_LOGS.debug("verifyRadioSelected");
+		return Constants.KEYWORD_PASS;
 	
 	}
 	
-	public void waitForElementVisibility() {
-		
+	public String waitForElementVisibility() {
+		APP_LOGS.debug("waitForElementVisibility");
+		return Constants.KEYWORD_PASS;
 	}
 	
-	public void verifyTextInput() {
-		
+	public String verifyTextInput() {
+		APP_LOGS.debug("verifyTextInput");
+		return Constants.KEYWORD_PASS;
 	}
 	
 	public void driverWait() throws InterruptedException {

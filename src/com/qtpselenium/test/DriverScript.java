@@ -2,6 +2,7 @@ package com.qtpselenium.test;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
 
@@ -21,7 +22,9 @@ public class DriverScript {
 	public String currentKeyword;
 	public Keywords keywords;
 	public Method method[];
-	
+	public String keyword_execution_result;
+	public ArrayList<String> resultSet;
+	public int currentTestDataSetID;
 	
 	
 	public DriverScript() {
@@ -30,25 +33,28 @@ public class DriverScript {
 	}
 	
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		DriverScript test = new DriverScript();
 		test.start();
 		
 	}
 		
 	
-	public void start() {
+	public void start() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+		
 		APP_LOGS = Logger.getLogger("devpinoyLogger");
+		
 		APP_LOGS.debug("Start Logs");
 		
-		APP_LOGS.debug("Initialize Suite Xlsx");		
-		suiteXLS = new Excel_Reader(System.getProperty("user.dir")+"\\src\\com\\qtpselenium\\xls\\Suite.xlsx");
+		APP_LOGS.debug("Initialize Suite Xlsx");	
 		
+		suiteXLS = new Excel_Reader(System.getProperty("user.dir")+"\\src\\com\\qtpselenium\\xls\\Suite.xlsx");		
 		
 		for(Constants.Sheet_Rnum =2;Constants.Sheet_Rnum<=suiteXLS.getRowCount(Constants.Suite_Name);Constants.Sheet_Rnum++) {
 			
 			APP_LOGS.debug(suiteXLS.getCellData(Constants.Suite_Name, Constants.Suite_TSID, Constants.Sheet_Rnum));
 			APP_LOGS.debug(suiteXLS.getCellData(Constants.Suite_Name, Constants.Suite_Runmode, Constants.Sheet_Rnum));
+			
 			if(suiteXLS.getCellData(Constants.Suite_Name, Constants.Suite_Runmode, Constants.Sheet_Rnum).equals(Constants.Runmode_Value)) {
 				// Execute individual Test Suite
 				APP_LOGS.debug("Execute test Suite" +"\n");
@@ -61,41 +67,54 @@ public class DriverScript {
 				APP_LOGS.debug("Current Suite is : "+ current_Suite_Xls+"*******************************Current Suite");
 			
 				for(currentTCID=2; currentTCID<=currentXLS.getRowCount(Constants.Suite_TC_Name);currentTCID++ ) {	
+					
 					currentTestcaseName = currentXLS.getCellData(Constants.Suite_TC_Name, Constants.Suite_TCID, currentTCID);
+					
 					System.out.println("current test case is :" +currentTestcaseName+"---------------------Current Test Case");
+					
 					APP_LOGS.debug("current test case is :" +currentTestcaseName+"---------------------Current Test Case");
 					
+					resultSet =new ArrayList<String>();
 					if(currentXLS.getCellData(Constants.Suite_TC_Name, Constants.Suite_Runmode,currentTCID).equals(Constants.Runmode_Value)){
 						
 		//			System.out.println(currentXLS.getCellData(Constants.Suite_TC_Name, Constants.Suite_TCID, currentTCID)+"---------???");	
 		//			}
-					if(currentXLS.isSheetExist(currentTestcaseName)) {
-					for(int i=0;i<currentXLS.getRowCount(currentTestcaseName);i++) {
+					
+						if(currentXLS.isSheetExist(currentTestcaseName)) {
+							
+						for(currentTestDataSetID =2;currentTestDataSetID<currentXLS.getRowCount(currentTestcaseName);currentTestDataSetID++) {
+									
 						
-						if(currentXLS.getCellData(currentTestcaseName, Constants.Suite_Runmode, i).equals(Constants.Runmode_Value)) {
+						if(currentXLS.getCellData(currentTestcaseName, Constants.Suite_Runmode, currentTestDataSetID).equals(Constants.Runmode_Value)) {
+							
 							
 					//	  System.out.println(currentXLS.getCellData(currentTestcaseName, 0, i));
-						  APP_LOGS.debug(currentXLS.getCellData(currentTestcaseName, 0, i));
+						  APP_LOGS.debug(currentXLS.getCellData(currentTestcaseName, 0, currentTestDataSetID));
 						  
 						  executeKeywords();
-					}
-					
-					
+						  createXLSReport();
+						  
+					}				
+						
 				}
 					
 				}else {
-					executeKeywords();
+					
+					executeKeywords();					
+					createXLSReport(); 
 					
 				}
 					
-			}
-				
-      }
-	}
-		}
 }
+				
+}
+}
+}
+}
+
 	
-	public void executeKeywords() {
+	public void executeKeywords() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+		
 		for(currentTestcaseID=2;currentTestcaseID<=currentXLS.getRowCount(Constants.TestSuite_TestSteps);currentTestcaseID++) {
 			
 			if(currentXLS.getCellData(Constants.TestSuite_TestSteps, Constants.Suite_TCID, currentTestcaseID).equals(currentTestcaseName))	
@@ -106,19 +125,64 @@ public class DriverScript {
 				
 				
 				for(int i =0; i<method.length;i++) {
-					String keyWord = method[i].getName();
-					if(keyWord.equals(currentKeyword)) {
-						try {
-							method[i].invoke(keywords);
-						} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+					if(method[i].getName().equals(currentKeyword)) {					
+							keyword_execution_result= (String) method[i].invoke(keywords);
+							APP_LOGS.debug(keyword_execution_result);
+							resultSet.add(keyword_execution_result);
+						
 					}
 				}
 			}
 		}
 		
 	}
+	
+	
+	
+	
+	 public void createXLSReport(){
+
+	        String colName=Constants.RESULT +(currentTestDataSetID-1);
+	        boolean isColExist=false;
+
+	        for(int c=0;c<currentXLS.getColumnCount(Constants.TestSuite_TestSteps);c++){
+	        
+	            if(currentXLS.getCellData(Constants.TestSuite_TestSteps,c , 1).equals(colName)){
+	                isColExist=true;
+	                break;
+	            }
+	        }
+	        if(!isColExist)
+	        	currentXLS.addColumn(Constants.TestSuite_TestSteps, colName);
+	        int index=0;
+	        for(int i=2;i<=currentXLS.getRowCount(Constants.TestSuite_TestSteps);i++){
+
+	            if(currentTestcaseName.equals(currentXLS.getCellData(Constants.TestSuite_TestSteps, Constants.Suite_TCID, i))){
+	                if(resultSet.size()==0)
+	                	currentXLS.setCellData(Constants.TestSuite_TestSteps, colName, i, Constants.KEYWORD_SKIP);
+	                else
+	                	currentXLS.setCellData(Constants.TestSuite_TestSteps, colName, i, resultSet.get(index));
+	                index++;
+	            }
+	           }
+
+	        if(resultSet.size()==0){
+	            // skip
+	        	currentXLS.setCellData(currentTestcaseName, Constants.RESULT, currentTestDataSetID, Constants.KEYWORD_SKIP);
+	            return;
+	        }else{
+	            for(int i=0;i<resultSet.size();i++){
+	                if(!resultSet.get(i).equals(Constants.KEYWORD_PASS)){
+	                //	currentXLS.setCellData(currentTestcaseName, Constants.RESULT, currentTCID, resultSet.get(i));
+	                	currentXLS.setCellData(currentTestcaseName, Constants.RESULT, currentTestDataSetID,Constants.KEYWORD_FAIL);
+	                    return;
+	                }
+	            }
+	        }
+	        currentXLS.setCellData(currentTestcaseName, Constants.RESULT, currentTestDataSetID, Constants.KEYWORD_PASS);
+	        //	if(!currentTestSuiteXLS.getCellData(currentTestCaseName, "Runmode",currentTestDataSetID).equals("Y")){}
+
+	    }
+
 	}
 	

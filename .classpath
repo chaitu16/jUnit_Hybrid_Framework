@@ -93,7 +93,6 @@
 	<classpathentry kind="lib" path="C:/Users/Aditya/Documents/jars/All jars/netty-transport-native-epoll-4.1.67.Final (2).jar"/>
 	<classpathentry kind="lib" path="C:/Users/Aditya/Documents/jars/All jars/netty-transport-native-kqueue-4.1.67.Final (2).jar"/>
 	<classpathentry kind="lib" path="C:/Users/Aditya/Documents/jars/All jars/netty-transport-native-unix-common-4.1.67.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Aditya/Documents/jars/All jars/ooxml-schemas-1.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Aditya/Documents/jars/All jars/opentelemetry-api-1.5.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Aditya/Documents/jars/All jars/opentelemetry-api-metrics-1.5.0-alpha.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Aditya/Documents/jars/All jars/opentelemetry-context-1.5.0.jar"/>

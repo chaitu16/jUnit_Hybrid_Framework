@@ -13,5 +13,7 @@ public class Constants {
 	public static String TestSteps_Keyword = "Keyword";
 	public static String KEYWORD_PASS = "PASS";
 	public static String KEYWORD_FAIL = "FAIL";
+	public static String KEYWORD_SKIP = "SKIP";
+	public static String RESULT = "Result";
 
 }
