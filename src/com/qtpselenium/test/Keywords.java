@@ -11,12 +11,14 @@ public class Keywords {
 	public String openBrowser() {
 		
 		APP_LOGS.debug("Opening browser");
-		APP_LOGS.debug(Constants.KEYWORD_PASS);
+		
 		return Constants.KEYWORD_PASS;
 
 	}
 	public String verifyText() {
+		
 		APP_LOGS.debug("Verifying Text Method");
+		
 		return Constants.KEYWORD_PASS;
 	}
 	
@@ -129,12 +131,17 @@ public class Keywords {
 		return Constants.KEYWORD_PASS;
 	}
 	
-	public void driverWait() throws InterruptedException {
+	public String selectList() {
+		APP_LOGS.debug("select List");
+		return Constants.KEYWORD_PASS;
+	}
+	
+/*	public void driverWait() throws InterruptedException {
 		synchronized (driver){
 			driver.wait(5000);			
 		}
 	}
-
+*/
 	
 }
 	

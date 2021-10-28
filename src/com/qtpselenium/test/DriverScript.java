@@ -74,61 +74,63 @@ public class DriverScript {
 					
 					APP_LOGS.debug("current test case is :" +currentTestcaseName+"---------------------Current Test Case");
 					
-					resultSet =new ArrayList<String>();
-					if(currentXLS.getCellData(Constants.Suite_TC_Name, Constants.Suite_Runmode,currentTCID).equals(Constants.Runmode_Value)){
-						
-		//			System.out.println(currentXLS.getCellData(Constants.Suite_TC_Name, Constants.Suite_TCID, currentTCID)+"---------???");	
-		//			}
 					
+					if(currentXLS.getCellData(Constants.Suite_TC_Name, Constants.Suite_Runmode,currentTCID).equals(Constants.Runmode_Value)){						
+		//			System.out.println(currentXLS.getCellData(Constants.Suite_TC_Name, Constants.Suite_TCID, currentTCID)+"---------???");	
+		//			}			
+						
 						if(currentXLS.isSheetExist(currentTestcaseName)) {
 							
-						for(currentTestDataSetID =2;currentTestDataSetID<currentXLS.getRowCount(currentTestcaseName);currentTestDataSetID++) {
-									
-						
-						if(currentXLS.getCellData(currentTestcaseName, Constants.Suite_Runmode, currentTestDataSetID).equals(Constants.Runmode_Value)) {
-							
+						for(currentTestDataSetID =2;currentTestDataSetID<=currentXLS.getRowCount(currentTestcaseName);currentTestDataSetID++) {	
+							resultSet =new ArrayList<String>();	
+						if(currentXLS.getCellData(currentTestcaseName, Constants.Suite_Runmode, currentTestDataSetID).equals(Constants.Runmode_Value)) {							
 							
 					//	  System.out.println(currentXLS.getCellData(currentTestcaseName, 0, i));
-						  APP_LOGS.debug(currentXLS.getCellData(currentTestcaseName, 0, currentTestDataSetID));
-						  
+						//  APP_LOGS.debug(currentXLS.getCellData(currentTestcaseName, 0, currentTestDataSetID));						  
 						  executeKeywords();
-						  createXLSReport();
 						  
-					}				
-						
-				}
-					
+						 						  					  	
+					}
+						createXLSReport();
+				}								
+									 			
 				}else {
+					//resultSet= new ArrayList<String>();
+					executeKeywords();	
+					createXLSReport();
+					 					
+				}
+						
 					
-					executeKeywords();					
-					createXLSReport(); 
+					}			
 					
 				}
-					
-}
-				
-}
-}
-}
-}
-
+			}
+		}
+	}
 	
 	public void executeKeywords() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		
 		for(currentTestcaseID=2;currentTestcaseID<=currentXLS.getRowCount(Constants.TestSuite_TestSteps);currentTestcaseID++) {
 			
-			if(currentXLS.getCellData(Constants.TestSuite_TestSteps, Constants.Suite_TCID, currentTestcaseID).equals(currentTestcaseName))	
-			{
+		//	if(currentXLS.getCellData(Constants.TestSuite_TestSteps, Constants.Suite_TCID, currentTestcaseID).equals(currentTestcaseName))	
+				if(currentTestcaseName.equals(currentXLS.getCellData(Constants.TestSuite_TestSteps, Constants.Suite_TCID, currentTestcaseID))) {	
+			
 				currentKeyword = currentXLS.getCellData(Constants.TestSuite_TestSteps, Constants.TestSteps_Keyword, currentTestcaseID);
 				//  System.out.println(currentKeyword);	
 				APP_LOGS.debug(currentKeyword);	
 				
-				
+			
 				for(int i =0; i<method.length;i++) {
-					if(method[i].getName().equals(currentKeyword)) {					
+					if(method[i].getName().equals(currentKeyword)) {	
+						
 							keyword_execution_result= (String) method[i].invoke(keywords);
 							APP_LOGS.debug(keyword_execution_result);
-							resultSet.add(keyword_execution_result);
+							resultSet.add(keyword_execution_result);							
+						
+						//resultSet.add(keyword_execution_result);
+				//		System.out.println("resultset size--------------------"+resultSet.size());
+						
 						
 					}
 				}
@@ -137,10 +139,7 @@ public class DriverScript {
 		
 	}
 	
-	
-	
-	
-	 public void createXLSReport(){
+		 public void createXLSReport(){
 
 	        String colName=Constants.RESULT +(currentTestDataSetID-1);
 	        boolean isColExist=false;
@@ -163,8 +162,10 @@ public class DriverScript {
 	                else
 	                	currentXLS.setCellData(Constants.TestSuite_TestSteps, colName, i, resultSet.get(index));
 	                index++;
+	            
 	            }
 	           }
+	           
 
 	        if(resultSet.size()==0){
 	            // skip

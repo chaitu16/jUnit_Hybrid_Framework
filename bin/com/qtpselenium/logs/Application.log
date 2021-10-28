@@ -1,118 +1,187 @@
-27/10/2021 23:27:05 devpinoyLogger Start Logs
-27/10/2021 23:27:05 devpinoyLogger Initialize Suite Xlsx
-27/10/2021 23:27:06 devpinoyLogger Check Items
-27/10/2021 23:27:06 devpinoyLogger Y
-27/10/2021 23:27:06 devpinoyLogger Execute test Suite
+28/10/2021 22:10:10 devpinoyLogger Start Logs
+28/10/2021 22:10:10 devpinoyLogger Initialize Suite Xlsx
+28/10/2021 22:10:11 devpinoyLogger Check Items
+28/10/2021 22:10:11 devpinoyLogger Y
+28/10/2021 22:10:11 devpinoyLogger Execute test Suite
 
-27/10/2021 23:27:06 devpinoyLogger Current Suite is : Check Items.xlsx*******************************Current Suite
-27/10/2021 23:27:06 devpinoyLogger current test case is :LoginTest---------------------Current Test Case
-27/10/2021 23:27:06 devpinoyLogger itsthakur@gmail.com
-27/10/2021 23:27:06 devpinoyLogger openBrowser
-27/10/2021 23:27:06 devpinoyLogger Opening browser
-27/10/2021 23:27:06 devpinoyLogger PASS
-27/10/2021 23:27:06 devpinoyLogger PASS
-27/10/2021 23:27:06 devpinoyLogger navigate
-27/10/2021 23:27:06 devpinoyLogger Navigate to URL
-27/10/2021 23:27:06 devpinoyLogger PASS
-27/10/2021 23:27:06 devpinoyLogger verifyTitle
-27/10/2021 23:27:06 devpinoyLogger Verify Title
-27/10/2021 23:27:06 devpinoyLogger PASS
-27/10/2021 23:27:06 devpinoyLogger clickLink
-27/10/2021 23:27:06 devpinoyLogger Click Link
-27/10/2021 23:27:06 devpinoyLogger PASS
-27/10/2021 23:27:06 devpinoyLogger writeInInput
-27/10/2021 23:27:06 devpinoyLogger Send keys 
-27/10/2021 23:27:06 devpinoyLogger PASS
-27/10/2021 23:27:06 devpinoyLogger writeInInput
-27/10/2021 23:27:06 devpinoyLogger Send keys 
-27/10/2021 23:27:06 devpinoyLogger PASS
-27/10/2021 23:27:06 devpinoyLogger clickButton
-27/10/2021 23:27:06 devpinoyLogger CLick Button
-27/10/2021 23:27:06 devpinoyLogger PASS
-27/10/2021 23:27:06 devpinoyLogger verifyLinkText
-27/10/2021 23:27:06 devpinoyLogger LinkText Verification
-27/10/2021 23:27:06 devpinoyLogger PASS
-27/10/2021 23:27:07 devpinoyLogger bbc@abc.com
-27/10/2021 23:27:07 devpinoyLogger openBrowser
-27/10/2021 23:27:07 devpinoyLogger Opening browser
-27/10/2021 23:27:07 devpinoyLogger PASS
-27/10/2021 23:27:07 devpinoyLogger PASS
-27/10/2021 23:27:07 devpinoyLogger navigate
-27/10/2021 23:27:07 devpinoyLogger Navigate to URL
-27/10/2021 23:27:07 devpinoyLogger PASS
-27/10/2021 23:27:07 devpinoyLogger verifyTitle
-27/10/2021 23:27:07 devpinoyLogger Verify Title
-27/10/2021 23:27:07 devpinoyLogger PASS
-27/10/2021 23:27:07 devpinoyLogger clickLink
-27/10/2021 23:27:07 devpinoyLogger Click Link
-27/10/2021 23:27:07 devpinoyLogger PASS
-27/10/2021 23:27:07 devpinoyLogger writeInInput
-27/10/2021 23:27:07 devpinoyLogger Send keys 
-27/10/2021 23:27:07 devpinoyLogger PASS
-27/10/2021 23:27:07 devpinoyLogger writeInInput
-27/10/2021 23:27:07 devpinoyLogger Send keys 
-27/10/2021 23:27:07 devpinoyLogger PASS
-27/10/2021 23:27:07 devpinoyLogger clickButton
-27/10/2021 23:27:07 devpinoyLogger CLick Button
-27/10/2021 23:27:07 devpinoyLogger PASS
-27/10/2021 23:27:07 devpinoyLogger verifyLinkText
-27/10/2021 23:27:07 devpinoyLogger LinkText Verification
-27/10/2021 23:27:07 devpinoyLogger PASS
-27/10/2021 23:27:07 devpinoyLogger current test case is :CheckItems---------------------Current Test Case
-27/10/2021 23:27:07 devpinoyLogger A1
-27/10/2021 23:27:07 devpinoyLogger openBrowser
-27/10/2021 23:27:07 devpinoyLogger Opening browser
-27/10/2021 23:27:07 devpinoyLogger PASS
-27/10/2021 23:27:07 devpinoyLogger PASS
-27/10/2021 23:27:07 devpinoyLogger navigate
-27/10/2021 23:27:07 devpinoyLogger Navigate to URL
-27/10/2021 23:27:07 devpinoyLogger PASS
-27/10/2021 23:27:07 devpinoyLogger verifyTitle
-27/10/2021 23:27:07 devpinoyLogger Verify Title
-27/10/2021 23:27:07 devpinoyLogger PASS
-27/10/2021 23:27:07 devpinoyLogger clickLink
-27/10/2021 23:27:07 devpinoyLogger Click Link
-27/10/2021 23:27:07 devpinoyLogger PASS
-27/10/2021 23:27:07 devpinoyLogger verifyLinkText
-27/10/2021 23:27:07 devpinoyLogger LinkText Verification
-27/10/2021 23:27:07 devpinoyLogger PASS
-27/10/2021 23:27:07 devpinoyLogger verifyText
-27/10/2021 23:27:07 devpinoyLogger Verifying Text Method
-27/10/2021 23:27:07 devpinoyLogger PASS
-27/10/2021 23:27:07 devpinoyLogger verifyLinkText
-27/10/2021 23:27:07 devpinoyLogger LinkText Verification
-27/10/2021 23:27:07 devpinoyLogger PASS
-27/10/2021 23:27:07 devpinoyLogger verifyText
-27/10/2021 23:27:07 devpinoyLogger Verifying Text Method
-27/10/2021 23:27:07 devpinoyLogger PASS
-27/10/2021 23:27:08 devpinoyLogger B1
-27/10/2021 23:27:08 devpinoyLogger openBrowser
-27/10/2021 23:27:08 devpinoyLogger Opening browser
-27/10/2021 23:27:08 devpinoyLogger PASS
-27/10/2021 23:27:08 devpinoyLogger PASS
-27/10/2021 23:27:08 devpinoyLogger navigate
-27/10/2021 23:27:08 devpinoyLogger Navigate to URL
-27/10/2021 23:27:08 devpinoyLogger PASS
-27/10/2021 23:27:08 devpinoyLogger verifyTitle
-27/10/2021 23:27:08 devpinoyLogger Verify Title
-27/10/2021 23:27:08 devpinoyLogger PASS
-27/10/2021 23:27:08 devpinoyLogger clickLink
-27/10/2021 23:27:08 devpinoyLogger Click Link
-27/10/2021 23:27:08 devpinoyLogger PASS
-27/10/2021 23:27:08 devpinoyLogger verifyLinkText
-27/10/2021 23:27:08 devpinoyLogger LinkText Verification
-27/10/2021 23:27:08 devpinoyLogger PASS
-27/10/2021 23:27:08 devpinoyLogger verifyText
-27/10/2021 23:27:08 devpinoyLogger Verifying Text Method
-27/10/2021 23:27:08 devpinoyLogger PASS
-27/10/2021 23:27:08 devpinoyLogger verifyLinkText
-27/10/2021 23:27:08 devpinoyLogger LinkText Verification
-27/10/2021 23:27:08 devpinoyLogger PASS
-27/10/2021 23:27:08 devpinoyLogger verifyText
-27/10/2021 23:27:08 devpinoyLogger Verifying Text Method
-27/10/2021 23:27:08 devpinoyLogger PASS
-27/10/2021 23:27:08 devpinoyLogger current test case is :AddItemstoCart---------------------Current Test Case
-27/10/2021 23:27:08 devpinoyLogger Search Suite
-27/10/2021 23:27:08 devpinoyLogger N
-27/10/2021 23:27:08 devpinoyLogger C Suite
-27/10/2021 23:27:08 devpinoyLogger N
+28/10/2021 22:10:11 devpinoyLogger Current Suite is : Check Items.xlsx*******************************Current Suite
+28/10/2021 22:10:11 devpinoyLogger current test case is :LoginTest---------------------Current Test Case
+28/10/2021 22:10:11 devpinoyLogger openBrowser
+28/10/2021 22:10:11 devpinoyLogger Opening browser
+28/10/2021 22:10:11 devpinoyLogger PASS
+28/10/2021 22:10:11 devpinoyLogger navigate
+28/10/2021 22:10:11 devpinoyLogger Navigate to URL
+28/10/2021 22:10:11 devpinoyLogger PASS
+28/10/2021 22:10:11 devpinoyLogger verifyTitle
+28/10/2021 22:10:11 devpinoyLogger Verify Title
+28/10/2021 22:10:11 devpinoyLogger PASS
+28/10/2021 22:10:11 devpinoyLogger clickLink
+28/10/2021 22:10:11 devpinoyLogger Click Link
+28/10/2021 22:10:11 devpinoyLogger PASS
+28/10/2021 22:10:11 devpinoyLogger writeInInput
+28/10/2021 22:10:11 devpinoyLogger Send keys 
+28/10/2021 22:10:11 devpinoyLogger PASS
+28/10/2021 22:10:11 devpinoyLogger writeInInput
+28/10/2021 22:10:11 devpinoyLogger Send keys 
+28/10/2021 22:10:11 devpinoyLogger PASS
+28/10/2021 22:10:11 devpinoyLogger clickButton
+28/10/2021 22:10:11 devpinoyLogger CLick Button
+28/10/2021 22:10:11 devpinoyLogger PASS
+28/10/2021 22:10:11 devpinoyLogger verifyLinkText
+28/10/2021 22:10:11 devpinoyLogger LinkText Verification
+28/10/2021 22:10:11 devpinoyLogger PASS
+28/10/2021 22:10:12 devpinoyLogger openBrowser
+28/10/2021 22:10:12 devpinoyLogger Opening browser
+28/10/2021 22:10:12 devpinoyLogger PASS
+28/10/2021 22:10:12 devpinoyLogger navigate
+28/10/2021 22:10:12 devpinoyLogger Navigate to URL
+28/10/2021 22:10:12 devpinoyLogger PASS
+28/10/2021 22:10:12 devpinoyLogger verifyTitle
+28/10/2021 22:10:12 devpinoyLogger Verify Title
+28/10/2021 22:10:12 devpinoyLogger PASS
+28/10/2021 22:10:12 devpinoyLogger clickLink
+28/10/2021 22:10:12 devpinoyLogger Click Link
+28/10/2021 22:10:12 devpinoyLogger PASS
+28/10/2021 22:10:12 devpinoyLogger writeInInput
+28/10/2021 22:10:12 devpinoyLogger Send keys 
+28/10/2021 22:10:12 devpinoyLogger PASS
+28/10/2021 22:10:12 devpinoyLogger writeInInput
+28/10/2021 22:10:12 devpinoyLogger Send keys 
+28/10/2021 22:10:12 devpinoyLogger PASS
+28/10/2021 22:10:12 devpinoyLogger clickButton
+28/10/2021 22:10:12 devpinoyLogger CLick Button
+28/10/2021 22:10:12 devpinoyLogger PASS
+28/10/2021 22:10:12 devpinoyLogger verifyLinkText
+28/10/2021 22:10:12 devpinoyLogger LinkText Verification
+28/10/2021 22:10:12 devpinoyLogger PASS
+28/10/2021 22:10:13 devpinoyLogger current test case is :CheckItems---------------------Current Test Case
+28/10/2021 22:10:13 devpinoyLogger openBrowser
+28/10/2021 22:10:13 devpinoyLogger Opening browser
+28/10/2021 22:10:13 devpinoyLogger PASS
+28/10/2021 22:10:13 devpinoyLogger navigate
+28/10/2021 22:10:13 devpinoyLogger Navigate to URL
+28/10/2021 22:10:13 devpinoyLogger PASS
+28/10/2021 22:10:13 devpinoyLogger verifyTitle
+28/10/2021 22:10:13 devpinoyLogger Verify Title
+28/10/2021 22:10:13 devpinoyLogger PASS
+28/10/2021 22:10:13 devpinoyLogger clickLink
+28/10/2021 22:10:13 devpinoyLogger Click Link
+28/10/2021 22:10:13 devpinoyLogger PASS
+28/10/2021 22:10:13 devpinoyLogger verifyLinkText
+28/10/2021 22:10:13 devpinoyLogger LinkText Verification
+28/10/2021 22:10:13 devpinoyLogger PASS
+28/10/2021 22:10:13 devpinoyLogger verifyText
+28/10/2021 22:10:13 devpinoyLogger Verifying Text Method
+28/10/2021 22:10:13 devpinoyLogger PASS
+28/10/2021 22:10:13 devpinoyLogger verifyLinkText
+28/10/2021 22:10:13 devpinoyLogger LinkText Verification
+28/10/2021 22:10:13 devpinoyLogger PASS
+28/10/2021 22:10:13 devpinoyLogger verifyText
+28/10/2021 22:10:13 devpinoyLogger Verifying Text Method
+28/10/2021 22:10:13 devpinoyLogger PASS
+28/10/2021 22:10:13 devpinoyLogger openBrowser
+28/10/2021 22:10:13 devpinoyLogger Opening browser
+28/10/2021 22:10:13 devpinoyLogger PASS
+28/10/2021 22:10:13 devpinoyLogger navigate
+28/10/2021 22:10:13 devpinoyLogger Navigate to URL
+28/10/2021 22:10:13 devpinoyLogger PASS
+28/10/2021 22:10:13 devpinoyLogger verifyTitle
+28/10/2021 22:10:13 devpinoyLogger Verify Title
+28/10/2021 22:10:13 devpinoyLogger PASS
+28/10/2021 22:10:13 devpinoyLogger clickLink
+28/10/2021 22:10:13 devpinoyLogger Click Link
+28/10/2021 22:10:13 devpinoyLogger PASS
+28/10/2021 22:10:13 devpinoyLogger verifyLinkText
+28/10/2021 22:10:13 devpinoyLogger LinkText Verification
+28/10/2021 22:10:13 devpinoyLogger PASS
+28/10/2021 22:10:13 devpinoyLogger verifyText
+28/10/2021 22:10:13 devpinoyLogger Verifying Text Method
+28/10/2021 22:10:13 devpinoyLogger PASS
+28/10/2021 22:10:13 devpinoyLogger verifyLinkText
+28/10/2021 22:10:13 devpinoyLogger LinkText Verification
+28/10/2021 22:10:13 devpinoyLogger PASS
+28/10/2021 22:10:13 devpinoyLogger verifyText
+28/10/2021 22:10:13 devpinoyLogger Verifying Text Method
+28/10/2021 22:10:13 devpinoyLogger PASS
+28/10/2021 22:10:14 devpinoyLogger current test case is :AddItemstoCart---------------------Current Test Case
+28/10/2021 22:10:14 devpinoyLogger Search Suite
+28/10/2021 22:10:14 devpinoyLogger Y
+28/10/2021 22:10:14 devpinoyLogger Execute test Suite
+
+28/10/2021 22:10:14 devpinoyLogger Current Suite is : Search Suite.xlsx*******************************Current Suite
+28/10/2021 22:10:14 devpinoyLogger current test case is :First3Results---------------------Current Test Case
+28/10/2021 22:10:14 devpinoyLogger openBrowser
+28/10/2021 22:10:14 devpinoyLogger Opening browser
+28/10/2021 22:10:14 devpinoyLogger PASS
+28/10/2021 22:10:14 devpinoyLogger navigate
+28/10/2021 22:10:14 devpinoyLogger Navigate to URL
+28/10/2021 22:10:14 devpinoyLogger PASS
+28/10/2021 22:10:14 devpinoyLogger verifyTitle
+28/10/2021 22:10:14 devpinoyLogger Verify Title
+28/10/2021 22:10:14 devpinoyLogger PASS
+28/10/2021 22:10:14 devpinoyLogger click
+28/10/2021 22:10:14 devpinoyLogger Generic click
+28/10/2021 22:10:14 devpinoyLogger PASS
+28/10/2021 22:10:14 devpinoyLogger selectList
+28/10/2021 22:10:14 devpinoyLogger select List
+28/10/2021 22:10:14 devpinoyLogger PASS
+28/10/2021 22:10:14 devpinoyLogger verifyText
+28/10/2021 22:10:14 devpinoyLogger Verifying Text Method
+28/10/2021 22:10:14 devpinoyLogger PASS
+28/10/2021 22:10:14 devpinoyLogger openBrowser
+28/10/2021 22:10:14 devpinoyLogger Opening browser
+28/10/2021 22:10:14 devpinoyLogger PASS
+28/10/2021 22:10:14 devpinoyLogger navigate
+28/10/2021 22:10:14 devpinoyLogger Navigate to URL
+28/10/2021 22:10:14 devpinoyLogger PASS
+28/10/2021 22:10:14 devpinoyLogger verifyTitle
+28/10/2021 22:10:14 devpinoyLogger Verify Title
+28/10/2021 22:10:14 devpinoyLogger PASS
+28/10/2021 22:10:14 devpinoyLogger click
+28/10/2021 22:10:14 devpinoyLogger Generic click
+28/10/2021 22:10:14 devpinoyLogger PASS
+28/10/2021 22:10:14 devpinoyLogger selectList
+28/10/2021 22:10:14 devpinoyLogger select List
+28/10/2021 22:10:14 devpinoyLogger PASS
+28/10/2021 22:10:14 devpinoyLogger verifyText
+28/10/2021 22:10:14 devpinoyLogger Verifying Text Method
+28/10/2021 22:10:14 devpinoyLogger PASS
+28/10/2021 22:10:15 devpinoyLogger openBrowser
+28/10/2021 22:10:15 devpinoyLogger Opening browser
+28/10/2021 22:10:15 devpinoyLogger PASS
+28/10/2021 22:10:15 devpinoyLogger navigate
+28/10/2021 22:10:15 devpinoyLogger Navigate to URL
+28/10/2021 22:10:15 devpinoyLogger PASS
+28/10/2021 22:10:15 devpinoyLogger verifyTitle
+28/10/2021 22:10:15 devpinoyLogger Verify Title
+28/10/2021 22:10:15 devpinoyLogger PASS
+28/10/2021 22:10:15 devpinoyLogger click
+28/10/2021 22:10:15 devpinoyLogger Generic click
+28/10/2021 22:10:15 devpinoyLogger PASS
+28/10/2021 22:10:15 devpinoyLogger selectList
+28/10/2021 22:10:15 devpinoyLogger select List
+28/10/2021 22:10:15 devpinoyLogger PASS
+28/10/2021 22:10:15 devpinoyLogger verifyText
+28/10/2021 22:10:15 devpinoyLogger Verifying Text Method
+28/10/2021 22:10:15 devpinoyLogger PASS
+28/10/2021 22:10:15 devpinoyLogger openBrowser
+28/10/2021 22:10:15 devpinoyLogger Opening browser
+28/10/2021 22:10:15 devpinoyLogger PASS
+28/10/2021 22:10:15 devpinoyLogger navigate
+28/10/2021 22:10:15 devpinoyLogger Navigate to URL
+28/10/2021 22:10:15 devpinoyLogger PASS
+28/10/2021 22:10:15 devpinoyLogger verifyTitle
+28/10/2021 22:10:15 devpinoyLogger Verify Title
+28/10/2021 22:10:15 devpinoyLogger PASS
+28/10/2021 22:10:15 devpinoyLogger click
+28/10/2021 22:10:15 devpinoyLogger Generic click
+28/10/2021 22:10:15 devpinoyLogger PASS
+28/10/2021 22:10:15 devpinoyLogger selectList
+28/10/2021 22:10:15 devpinoyLogger select List
+28/10/2021 22:10:15 devpinoyLogger PASS
+28/10/2021 22:10:15 devpinoyLogger verifyText
+28/10/2021 22:10:15 devpinoyLogger Verifying Text Method
+28/10/2021 22:10:15 devpinoyLogger PASS
+28/10/2021 22:10:15 devpinoyLogger current test case is :LaptopdisplayTest---------------------Current Test Case
+28/10/2021 22:10:15 devpinoyLogger C Suite
+28/10/2021 22:10:15 devpinoyLogger N
